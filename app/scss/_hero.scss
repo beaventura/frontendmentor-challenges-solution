@@ -1,0 +1,128 @@
+.hero {
+	// background-color: $veryLightGray;
+	background-image: url('../images/bg-desktop.jpg');
+
+	.container {
+		height: 34.375rem;
+
+		@include breakpoint-up(medium) {
+			display: flex;
+			justify-content: center;
+		}
+
+		@include breakpoint-up(large) {
+			display: flex;
+			justify-content: left;
+		}
+	}
+
+	.container-button {
+		@include breakpoint-up(medium) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		@include breakpoint-up(large) {
+			display: flex;
+			justify-content: left;
+		}
+
+		> div {
+			&:not(:last-child) {
+				@include breakpoint-up(medium) {
+					margin-right: 15px;
+				}
+
+				@include breakpoint-up(large) {
+					margin-right: 15px;
+				}
+			}
+		}
+	}
+
+	&__text {
+		text-align: center;
+		margin: auto;
+
+		h1 {
+			font-weight: 700;
+			line-height: 1;
+
+			span {
+				color: $violet;
+			}
+		}
+
+		.border {
+			width: 10rem;
+			border-bottom-color: $black;
+			border-bottom-width: 0.3125rem;
+			border-bottom-style: solid;
+			margin: auto;
+
+			@include breakpoint-up(large) {
+				margin-right: auto;
+				margin-left: 0;
+			}
+		}
+
+		@include breakpoint-up(medium) {
+			width: 38rem;
+			text-align: center;
+		}
+
+		@include breakpoint-up(large) {
+			width: 30rem;
+			text-align: left;
+		}
+	}
+
+	&__social {
+		margin-bottom: 1.875rem;
+		transition: transform 500ms ease-in-out;
+
+		@include breakpoint-down(medium) {
+			margin-bottom: 1.875rem;
+		}
+
+		@include breakpoint-up(large) {
+			grid-area: social;
+			align-self: end;
+		}
+
+		> a:first-child {
+			margin-right: 0.9375rem;
+		}
+
+		img:hover {
+			transform: scale(1.05);
+		}
+	}
+
+	&__image {
+		position: relative;
+		animation: float 6s ease-in-out infinite;
+
+		@include breakpoint-up(large) {
+			flex: 3;
+			order: 2;
+			min-height: 33rem;
+			background-image: none;
+		}
+
+		&::before {
+			@include breakpoint-up(large) {
+				content: '';
+				position: absolute;
+				height: 100%;
+				background-image: url('../images/bg-intro-desktop.png');
+				background-repeat: no-repeat;
+				background-position: center center;
+				width: 140%;
+				background-size: 70%;
+				background-position: 35% 60%;
+			}
+		}
+	}
+}

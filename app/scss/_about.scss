@@ -1,0 +1,37 @@
+.about {
+	&__intro {
+		p {
+			margin-bottom: 0;
+		}
+	}
+
+	&__info {
+		display: flex;
+
+		.border {
+			height: 0.25rem;
+			width: 5.5rem;
+			background: $violet;
+			margin-top: auto;
+			margin-bottom: auto;
+		}
+
+		.subtitle {
+			margin-left: 0.9375rem;
+			font-size: 0.75rem;
+		}
+	}
+
+	&__description {
+		line-height: 1.8;
+		color: $white;
+		padding: 2.8125rem;
+		border-radius: 1.5625rem;
+		background: linear-gradient(to bottom right, $violet, $trypanblue);
+
+		span {
+			font-weight: 600;
+			color: $orange;
+		}
+	}
+}
