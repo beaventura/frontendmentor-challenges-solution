@@ -3,7 +3,8 @@
 	background-image: url('../images/bg-desktop.jpg');
 
 	.container {
-		height: 34.375rem;
+		display: flex;
+		height: 28.125rem;
 
 		@include breakpoint-up(medium) {
 			display: flex;
@@ -65,6 +66,12 @@
 				margin-right: auto;
 				margin-left: 0;
 			}
+		}
+
+		@include breakpoint-up(small) {
+			width: 38rem;
+			text-align: center;
+			padding-top: 2.1875rem;
 		}
 
 		@include breakpoint-up(medium) {

@@ -379,7 +379,8 @@ a:hover {
   background-image: url("../images/bg-desktop.jpg");
 }
 .hero .container {
-  height: 34.375rem;
+  display: flex;
+  height: 28.125rem;
 }
 @media (min-width: 40em) {
   .hero .container {
@@ -438,6 +439,13 @@ a:hover {
   .hero__text .border {
     margin-right: auto;
     margin-left: 0;
+  }
+}
+@media (min-width: ) {
+  .hero__text {
+    width: 38rem;
+    text-align: center;
+    padding-top: 2.1875rem;
   }
 }
 @media (min-width: 40em) {
