@@ -745,6 +745,10 @@ a:hover {
   font-weight: 600;
   color: hsl(34deg, 95%, 49%);
 }
+.about__description span:hover {
+  cursor: default;
+  text-decoration: underline;
+}
 
 .footer {
   background-color: hsl(220deg, 4%, 14%);

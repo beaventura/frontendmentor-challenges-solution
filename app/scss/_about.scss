@@ -32,6 +32,11 @@
 		span {
 			font-weight: 600;
 			color: $orange;
+
+			&:hover {
+				cursor: default;
+				text-decoration: underline;
+			}
 		}
 	}
 }
