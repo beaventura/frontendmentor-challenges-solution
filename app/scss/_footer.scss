@@ -1,5 +1,5 @@
 .footer {
-	background-color: $darkBlue;
+	background-color: $black;
 	color: $white;
 	padding: 2.5rem;
 	text-align: center;
@@ -15,14 +15,24 @@
 			gap: 1rem;
 			justify-items: start;
 		}
+
+		a {
+			color: $white;
+		}
+
+		a span {
+			color: $darkaqua;
+		}
 	}
 
-	a {
-		color: $white;
-	}
-
-	&__logo {
+	&__name {
 		display: inline-block;
+		font-weight: 700;
+		transition: font-size 300ms ease-in-out;
+
+		&:hover {
+			font-size: x-large;
+		}
 
 		@include breakpoint-down(medium) {
 			margin-bottom: 1.875rem;
@@ -52,7 +62,7 @@
 			}
 
 			&:hover svg path {
-				fill: $limeGreen;
+				fill: $darkaqua;
 			}
 		}
 
@@ -93,7 +103,7 @@
 			transition: color 150ms ease-in-out;
 
 			&:hover {
-				color: $limeGreen;
+				color: $darkaqua;
 			}
 		}
 	}
@@ -114,7 +124,7 @@
 
 	&__copyright {
 		font-size: 0.8125rem;
-		color: $grayishBlue;
+		color: $darkgrayishblue;
 
 		@include breakpoint-up(large) {
 			grid-area: copyright;
@@ -126,9 +136,16 @@
 	.attribution {
 		margin-top: 4rem;
 		font-size: 0.875rem;
+		color: $darkgrayishblue;
 
 		a {
-			color: $white;
+			font-weight: 600;
+			color: $darkaqua;
+			transition: 300ms ease-in-out;
+
+			&:hover {
+				font-size: medium;
+			}
 		}
 	}
 }
